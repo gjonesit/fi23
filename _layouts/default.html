@@ -180,57 +180,111 @@
     }
 }
 
-/* ===== DROPDOWN FIX DEFINITIVO ===== */
+
+
+/* ===== DROPDOWN STILE PULITO ===== */
 
 .main-nav li.dropdown {
     position: relative;
 }
 
-/* menu nascosto di default (FORZATO) */
+/* titolo non link */
+.dropdown-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    padding: 18px 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: default;
+}
+
+/* menu dropdown */
 .dropdown-menu {
-    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 220px;
-    background: var(--red);
-    padding: 8px 0;
-    margin: 0;
+    min-width: 230px;
+    background: white;
     list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     z-index: 9999;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.2s ease;
 }
 
-/* mostra SOLO al passaggio mouse */
-.main-nav li.dropdown:hover > .dropdown-menu {
-    display: block !important;
+/* apertura */
+.main-nav li.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-/* stile link */
+/* link dentro dropdown */
 .dropdown-menu li a {
     display: block;
-    padding: 12px 18px;
+    padding: 12px 16px;
     font-size: 13px;
-    color: white;
+    color: #111;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: 0.2s;
 }
 
 .dropdown-menu li a:hover {
-    background: rgba(255,255,255,0.15);
+    background: #f4f4f5;
 }
 
-/* mobile: sempre chiuso (evita bug hover) */
+/* piccolo triangolino visivo */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
+
+    .dropdown-title {
+        padding: 15px;
+        justify-content: center;
+    }
+
     .dropdown-menu {
         position: static;
-        display: none !important;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
         box-shadow: none;
+        border-radius: 0;
+        background: rgba(255,255,255,0.1);
     }
 
-    .main-nav li.dropdown:hover > .dropdown-menu {
-        display: block !important;
+    .dropdown-menu li a {
+        color: white;
+        padding-left: 30px;
+    }
+
+    .dropdown-menu::before {
+        display: none;
     }
 }
-    </style>
+
+</style>
 </head>
 <body>
 
