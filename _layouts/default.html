@@ -617,6 +617,83 @@ footer {
 #menu-toggle {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .header-top {
+        flex-wrap: wrap;
+        padding: 15px 5%;
+    }
+
+    .logo-area {
+        order: 1;
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        order: 2;
+        justify-content: flex-start;
+    }
+
+    .user-area {
+        order: 3;
+        text-align: right;
+    }
+
+    /* SHOW HAMBURGER */
+    .menu-button {
+        display: block;
+        background: var(--red);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* NAV MOBILE */
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* TOGGLE MENU */
+    #menu-toggle:checked + .menu-button + .main-nav ul {
+        display: flex;
+    }
+
+    .main-nav li a,
+    .dropdown-title {
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        text-align: center;
+    }
+
+    /* DROPDOWN MOBILE */
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-grid {
+        text-align: center;
+    }
+}
 </style>
 </head>
 <body>
