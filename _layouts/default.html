@@ -179,6 +179,49 @@
         justify-content: center;
     }
 }
+
+
+/* DROPDOWN */
+.main-nav li {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--red);
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 2000;
+}
+
+.dropdown-menu li a {
+    padding: 12px 15px;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0,0,0,0.15);
+}
+
+/* hover desktop */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* mobile: dropdown sempre in colonna */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
     </style>
 </head>
 <body>
@@ -218,9 +261,14 @@
         <ul>
             <li><a href="/">home</a></li>
             <li><a href="https://gabrieljones.it/about/">Chi sono</a></li>
-            <li><a href="{{ site.url }}/categorie/infanzia/">Infanzia</a></li>
-            <li><a href="{{ site.url }}/categorie/grafica/">grafica</a></li>
-            <li><a href="{{ site.url }}/categorie/">Categorie</a></li>
+            <li class="dropdown">
+                <a href="{{ site.url }}/categorie/">Categorie <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ site.url }}/categorie/grafica/">Grafica</a></li>
+                    <li><a href="{{ site.url }}/categorie/infanzia/">Infanzia</a></li>
+                    <li><a href="{{ site.url }}/categorie/18Y/">18 anni</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
