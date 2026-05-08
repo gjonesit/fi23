@@ -180,76 +180,54 @@
     }
 }
 
-/* ===== DROPDOWN FIXATO BENE ===== */
+/* ===== DROPDOWN FIX DEFINITIVO ===== */
 
-.main-nav li {
+.main-nav li.dropdown {
     position: relative;
 }
 
-/* link principale */
-.dropdown > a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* menu dropdown */
+/* menu nascosto di default (FORZATO) */
 .dropdown-menu {
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--red);
     min-width: 220px;
+    background: var(--red);
     padding: 8px 0;
     margin: 0;
     list-style: none;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* link dentro dropdown */
+/* mostra SOLO al passaggio mouse */
+.main-nav li.dropdown:hover > .dropdown-menu {
+    display: block !important;
+}
+
+/* stile link */
 .dropdown-menu li a {
-    padding: 12px 18px;
     display: block;
+    padding: 12px 18px;
     font-size: 13px;
-    text-transform: none;
-    letter-spacing: 0.3px;
+    color: white;
 }
 
 .dropdown-menu li a:hover {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.15);
 }
 
-/* hover desktop */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* evita che il menu venga tagliato */
-.main-nav {
-    overflow: visible;
-}
-
-/* ===== MOBILE FIX ===== */
+/* mobile: sempre chiuso (evita bug hover) */
 @media (max-width: 768px) {
-
     .dropdown-menu {
         position: static;
-        display: none;
+        display: none !important;
         box-shadow: none;
-        border-radius: 0;
-        background: rgba(0,0,0,0.15);
     }
 
-    /* apre sotto nel menu mobile */
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-
-    .dropdown-menu li a {
-        padding-left: 30px;
+    .main-nav li.dropdown:hover > .dropdown-menu {
+        display: block !important;
     }
 }
     </style>
