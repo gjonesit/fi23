@@ -18,16 +18,123 @@ layout: default
 
 
 <section style="grid-column: 1 / -1; margin-top: 80px; margin-bottom: 60px;">
+
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
         <h3 style="font-size: 24px; font-weight: 900; text-transform: uppercase;">Chi sono</h3>
-        <a href="https://gabrieljones.it/about" style="color: var(--red); font-weight: 800; text-decoration: none;">Approfondisci</a>
+
+        <a href="https://gabrieljones.it/about"
+           style="color: var(--red); font-weight: 800; text-decoration: none;">
+           Approfondisci
+        </a>
     </div>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 25px; border: 4px solid #1a1a1a; background: #000;">
-        <img style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-esempio.png" 
-                title="Jones" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </img>
+
+    <div style="
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        border: 4px solid #1a1a1a;
+        min-height: 550px;
+    ">
+
+        <!-- immagine -->
+        <img src="https://www.sinonimi-contrari.it/includes/images/sharers/sinonimi-di-esempio.png"
+             alt="Gabriel Jones"
+             style="
+                position:absolute;
+                inset:0;
+                width:100%;
+                height:100%;
+                object-fit:cover;
+             ">
+
+        <!-- overlay scuro -->
+        <div style="
+            position:absolute;
+            inset:0;
+            background:linear-gradient(
+                to top,
+                rgba(0,0,0,0.75),
+                rgba(0,0,0,0.2)
+            );
+        "></div>
+
+        <!-- contenuto -->
+        <div style="
+            position:relative;
+            z-index:2;
+            display:flex;
+            flex-direction:column;
+            justify-content:flex-end;
+            height:550px;
+            padding:60px;
+            color:white;
+        ">
+
+            <span style="
+                font-size:13px;
+                font-weight:800;
+                letter-spacing:2px;
+                text-transform:uppercase;
+                color:var(--yellow);
+                margin-bottom:15px;
+            ">
+                Educatore • Creativo • Innovazione
+            </span>
+
+            <h1 style="
+                font-size:clamp(38px,6vw,72px);
+                line-height:0.95;
+                margin:0 0 25px;
+                font-weight:900;
+                max-width:700px;
+            ">
+                Mi piace creare spazi dove i bambini possano crescere, imparare e divertirsi.
+            </h1>
+
+            <p style="
+                max-width:650px;
+                font-size:18px;
+                line-height:1.7;
+                opacity:0.95;
+                margin-bottom:35px;
+            ">
+                Tra oratorio, giochi, creatività e attività educative, condivido idee,
+                esperienze e progetti pensati per rendere l’infanzia qualcosa di speciale.
+            </p>
+
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+
+                <a href="/about"
+                   style="
+                    background:var(--red);
+                    color:white;
+                    padding:16px 34px;
+                    border-radius:12px;
+                    font-weight:900;
+                    text-transform:uppercase;
+                    letter-spacing:1px;
+                    text-decoration:none;
+                   ">
+                    Scopri di più
+                </a>
+
+                <a href="/contatti"
+                   style="
+                    background:white;
+                    color:#1a1a1a;
+                    padding:16px 34px;
+                    border-radius:12px;
+                    font-weight:900;
+                    text-transform:uppercase;
+                    letter-spacing:1px;
+                    text-decoration:none;
+                   ">
+                    Contattami
+                </a>
+
+            </div>
+        </div>
+
     </div>
 </section>
 
