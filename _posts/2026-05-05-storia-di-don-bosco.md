@@ -2,7 +2,8 @@
 layout: post
 title: Storia di DobBosco
 image: https://vocetempo.it/vt2018/wp-content/uploads/2020/04/confessa.jpg
-date: 2026-01-01
+date: Maggio 2026
+Tag: storia
 ---
 
 Giovanni Bosco, nato nel 1815 a Castelnuovo d’Asti, dedicò la sua vita ai giovani poveri e abbandonati della Torino dell’Ottocento. Vedendo ragazzi senza scuola, lavoro o famiglia, iniziò a incontrarli per strada, insegnando loro un mestiere, il catechismo e offrendo amicizia e accoglienza.
