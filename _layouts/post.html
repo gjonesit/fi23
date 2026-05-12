@@ -9,11 +9,16 @@ layout: default
 
     <section class="content">
       <aside class="sidebar">
-        <h4>Indice della pagina</h4>
+<!--        <h4>Indice della pagina</h4>
         <ul>
           <li>gabrieljones.it > FI23 > Blog</li>
           <li>{{ page.title }}</li>
-        </ul>
+        </ul>-->
+
+        <h4>{{ page.title }}</h4>
+        <p>Fatto da: <a href="https://gabrieljones.it/user/@gabrieljones">@gabrieljones</a></p>
+        <p>Cattegoria: <a href="https://gabrieljones.it/fi23/cattegory/{{ page.tag }}">{{ page.tag }}</a></p>
+        <p>Data: {{ page.date }}</p>
       </aside>
 
       <main class="main">
