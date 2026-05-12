@@ -2,7 +2,7 @@
 layout: post
 title: Storia di DobBosco
 image: https://vocetempo.it/vt2018/wp-content/uploads/2020/04/confessa.jpg
-date: Maggio 2026
+date: 12-05-2026
 Tag: storia
 ---
 
