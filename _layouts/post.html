@@ -2,33 +2,136 @@
 layout: default
 ---
 
-<article class="post">
+  <div class="container">
+    <section class="hero">
+    <img src="{{ page.img | default: 'https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1509/2164680/1000w_q95.jpg' }}" alt="Hero" />
+    </section>
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
+    <section class="content">
+      <aside class="sidebar">
+        <h4>Indice della pagina</h4>
+        <ul>
+          <li>gabrieljones.it > FI23 > Blog</li>
+          <li>{{ page.title }}</li>
+        </ul>
+      </aside>
 
-    <div class="post-meta">
-      <span>
-        <i class="far fa-calendar"></i>
-        {{ page.date | date: "%d %B %Y" }}
-      </span>
-
-      {% if page.categories %}
-      <span class="post-cat">
-        {{ page.categories | join: ", " }}
-      </span>
-      {% endif %}
-    </div>
-  </header>
-
-  {% if page.image %}
-  <div class="post-hero">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
-  </div>
-  {% endif %}
-
-  <div class="post-content">
-    {{ content }}
+      <main class="main">
+        <h1>{{ page.title }}</h1>
+        <p>
+          {{ content }}
+        </p>
+      </main>
+    </section>
   </div>
 
-</article>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #111;
+      padding: 24px;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: auto;
+      background: white;
+      padding: 0 0 40px;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      border-top: 1px solid #ddd;
+    }
+
+    .sidebar {
+      border-right: 1px solid #ddd;
+      padding: 22px;
+    }
+
+    .sidebar h4 {
+      color: #0b3ba7;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-bottom: 4px solid #0b3ba7;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 28px;
+      color: #0b3ba7;
+      font-size: 20px;
+    }
+
+    .main {
+      padding: 48px;
+    }
+
+    .main h1 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      font-weight: 700;
+    }
+
+    .main p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 0; }
+
+      .hero img {
+        height: 280px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 16px;
+      }
+
+      .sidebar h4 {
+        font-size: 13px;
+        margin-bottom: 18px;
+      }
+
+      .sidebar li {
+        font-size: 18px;
+        margin-bottom: 18px;
+      }
+
+      .main {
+        padding: 24px 16px;
+      }
+
+      .main h1 {
+        font-size: 34px;
+      }
+
+      .main p {
+        font-size: 20px;
+      }
+    }
+  </style>
