@@ -4,7 +4,7 @@ layout: default
 
   <div class="container">
     <section class="hero">
-    <img src="{{ page.img | default: 'https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1509/2164680/1000w_q95.jpg' }}" alt="Hero" />
+    <image src="{{ page.image | default: 'https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1509/2164680/1000w_q95.jpg' }}" alt="Hero" />
     </section>
 
     <section class="content">
@@ -48,7 +48,7 @@ layout: default
       padding: 0 0 40px;
     }
 
-    .hero img {
+    .hero image {
       width: 100%;
       height: 520px;
       object-fit: cover;
@@ -104,7 +104,7 @@ layout: default
     @media (max-width: 768px) {
       body { padding: 0; }
 
-      .hero img {
+      .hero image {
         height: 280px;
       }
 
